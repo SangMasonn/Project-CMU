@@ -1,8 +1,10 @@
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class Calculator extends JFrame {
+
     private JTextField num1Field, num2Field, resultField;
     private JButton addButton, subButton, mulButton, divButton;
 
@@ -42,19 +44,19 @@ public class Calculator extends JFrame {
     }
 
     private void calculateAddition() {
-     
+        performCalculation((a, b) -> a + b);
     }
 
     private void calculateSubtraction() {
-       
+        performCalculation((a, b) -> a - b);
     }
 
     private void calculateMultiplication() {
-     
+
     }
 
     private void calculateDivision() {
-      
+
     }
 
     private void performCalculation(CalculatorFunction function) {
@@ -81,5 +83,6 @@ public class Calculator extends JFrame {
 
 @FunctionalInterface
 interface CalculatorFunction {
+
     double apply(double a, double b);
 }
