@@ -41,12 +41,12 @@ public class Calculator extends JFrame {
         add(resultField);
     }
 
-    private void calculateAddition() {
-     
+   private void calculateAddition() {
+        performCalculation((a, b) -> a + b);
     }
 
     private void calculateSubtraction() {
-       
+        performCalculation((a, b) -> a - b);
     }
 
     private void calculateMultiplication() {
